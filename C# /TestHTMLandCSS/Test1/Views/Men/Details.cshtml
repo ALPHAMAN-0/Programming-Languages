@@ -1,0 +1,39 @@
+@model Product
+
+<div class="product-details-container">
+    <div class="product-details-grid">
+        <div class="product-image-section">
+            <img src="@Model.ImagePath" alt="@Model.Name" class="main-image">
+        </div>
+        <div class="product-info-section">
+            <h1 class="product-title">@Model.Name</h1>
+            <p class="product-price">$@Model.Price.ToString("0.00")</p>
+            
+            <div class="product-description">
+                <h3>Description</h3>
+                <p>@Model.Description</p>
+            </div>
+
+            <div class="size-selection">
+                <h3>Select Size</h3>
+                <div class="size-options">
+                    @foreach (var size in Model.Sizes)
+                    {
+                        <button class="size-btn">@size</button>
+                    }
+                </div>
+            </div>
+
+            <div class="quantity-selector">
+                <h3>Quantity</h3>
+                <div class="quantity-controls">
+                    <button class="qty-btn" onclick="updateQuantity(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                    <button class="qty-btn" onclick="updateQuantity(1)">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+</div>

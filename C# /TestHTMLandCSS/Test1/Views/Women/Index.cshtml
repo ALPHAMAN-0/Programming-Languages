@@ -1,0 +1,40 @@
+@model IEnumerable<Test1.Models.Product>
+
+@{
+    ViewData["Title"] = "Women's Collection";
+}
+
+<div class="category-header">
+    <h1>Women's Collection</h1>
+    <div class="filters">
+        <select class="filter-dropdown">
+            <option>Sort by</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Latest</option>
+        </select>
+    </div>
+</div>
+
+<div class="product-grid">
+    @foreach (var product in Model)
+    {
+        <div class="product-card">
+            <div class="product-image">
+                <img src="@product.ImagePath" alt="@product.Name">
+                <div class="quick-view">Quick View</div>
+            </div>
+            <div class="product-info">
+                <h3>@product.Name</h3>
+                <p class="price">$@product.Price.ToString("0.00")</p>
+                <div class="size-options">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>L</span>
+                    <span>XL</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    }
+</div>

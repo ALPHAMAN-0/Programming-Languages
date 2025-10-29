@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GEAR CASTLE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <label class="logo">
+                <a href="#" class="logo-link" data-toggle="modal" data-target="#logoModal">GEAR CASTLE</a>
+            </label>
+            
+            <!-- Add Search Bar -->
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search products...">
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
+                <li><a asp-controller="Sale" asp-action="Index">SALE</a></li>
+                <li><a asp-controller="Women" asp-action="Index">WOMEN</a></li>
+                <li><a asp-controller="Men" asp-action="Index">MEN</a></li>
+                <li><a asp-controller="Newborn" asp-action="Index">NEWBORN</a></li>
+                <li><a href="#accessories">ACCESSORIES</a></li>
+                <li class="login-item">
+                    @if (Context.Session.GetString("IsAdmin") == "true")
+                    {
+                        <div class="user-menu">
+                            <a asp-controller="Admin" asp-action="Dashboard">
+                                <i class="fas fa-user"></i> 
+                                <span>Admin Dashboard</span>
+                            </a>
+                            <a asp-controller="Account" asp-action="Logout" class="logout-btn">
+                                <i class="fas fa-sign-out-alt"></i> 
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login">
+                            <i class="fas fa-sign-in-alt"></i> 
+                            <span>Login</span>
+                        </a>
+                    }
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 GEAR CASTLE - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <div class="modal fade" id="logoModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/images/Background/SIAM.png" alt="SIAM" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

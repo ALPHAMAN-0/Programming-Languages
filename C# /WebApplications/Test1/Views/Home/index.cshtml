@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to GEAR CASTLE</h1>
+        <p>Discover the Latest Fashion Trends</p>
+        <a href="#featured" class="shop-now-btn">Shop Now</a>
+    </div>
+</div>
+
+<div class="featured-categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+        <div class="category-card">
+            <img src="~/images/categories/women.png" alt="Women's Fashion">
+            <div class="category-info">
+                <h3>Women's Fashion</h3>
+                <a asp-controller="Women" asp-action="Index" class="category-link">Shop Now</a>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="~/images/categories/men.png" alt="Men's Fashion">
+            <div class="category-info">
+                <h3>Men's Fashion</h3>
+                <a asp-controller="Men" asp-action="Index" class="category-link">Shop Now</a>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="~/images/categories/newborn.png" alt="Newborn Fashion">
+            <div class="category-info">
+                <h3>Newborn Collection</h3>
+                <a asp-controller="Newborn" asp-action="Index" class="category-link">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</div>

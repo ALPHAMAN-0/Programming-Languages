@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Sale Collection";
+}
+
+<div class="category-header">
+    <h1>Special Offers</h1>
+    <div class="category-filters">
+        <div class="filter-group">
+            <select class="filter-dropdown">
+                <option>All Categories</option>
+                <option>Men's Wear</option>
+                <option>Women's Wear</option>
+                <option>Kids Wear</option>
+            </select>
+            <select class="filter-dropdown">
+                <option>Discount %</option>
+                <option>Up to 30%</option>
+                <option>30% - 50%</option>
+                <option>Over 50%</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="product-grid">
+    @for (int i = 1; i <= 12; i++)
+    {
+        <div class="product-card sale-card">
+            <div class="discount-badge">-50%</div>
+            <div class="product-image">
+                <img src="~/images/sale@(i).jpg" alt="Sale Item @i">
+                <div class="quick-view">
+                    <button class="quick-view-btn">Quick View</button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Sale Item @i</h3>
+                <div class="product-price">
+                    <span class="current-price">$49.99</span>
+                    <span class="original-price">$99.99</span>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    }
+</div>

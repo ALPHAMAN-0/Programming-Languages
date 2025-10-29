@@ -1,0 +1,8 @@
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.csproj.AssemblyReference.cache
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.AssemblyInfoInputs.cache
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.AssemblyInfo.cs
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.csproj.CoreCompileInputs.cache
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.MvcApplicationPartsAssemblyInfo.cache
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.RazorAssemblyInfo.cache
+/Users/siam/Desktop/C#/E-commerce/my-aspnet-webapp/obj/Debug/net5.0/my-aspnet-webapp.RazorAssemblyInfo.cs

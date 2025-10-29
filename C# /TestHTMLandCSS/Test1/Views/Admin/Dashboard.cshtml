@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+    <div class="dashboard-actions">
+        <a asp-controller="Admin" asp-action="Products" class="btn btn-primary">Add Product</a>
+        <a asp-controller="Admin" asp-action="ManageProducts" class="btn btn-secondary">Manage Products</a>
+    </div>
+</div>
